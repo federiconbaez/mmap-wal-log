@@ -1,0 +1,17 @@
+[package]
+name = "mmap-wal-log"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+license = "Apache-2.0"
+description = "Append-only log on a memory-mapped file with a CRC32C per record, torn-tail recovery and a salvage reader"
+repository = "https://github.com/federiconbaez/mmap-wal-log"
+keywords = ["wal", "mmap", "log", "crash-recovery", "storage"]
+categories = ["database-implementations"]
+
+[dependencies]
+crc32c = "0.6"
+memmap2 = "0.9"
+
+[profile.release]
+debug = 1
